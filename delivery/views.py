@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from .models import Cart, Customer, Restaurant, Item
+from .models import Customer, Restaurant, Item, Cart
 
 # Create your views here.
 def index(request):
@@ -155,4 +155,12 @@ def add_to_cart(request, item_id, username):
     return HttpResponse('added to cart')
 
 def show_cart(request, username):
-    return HttpResponse('showing cart')
+    customer = Customer.objects.get(username = username)
+    cart = Cart.objects.filter(customer=customer).first()
+    items = cart.items.all() if cart else []
+    total_price = cart.total_price() if cart else 0
+
+    return render(request, 'delivery/cart.html',{"itemList" : items, "total_price" : total_price, "username":username})
+
+def checkout(request, username):
+    return HttpResponse('Payment page')
