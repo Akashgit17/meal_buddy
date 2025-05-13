@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+     {% load static %}
     <title>Sign UP</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'delivery/styles.css' %}">
 </head>
 <body>
     <h3>SIGN UP below:</h3>
@@ -10,19 +11,19 @@
     <form action="{% url 'signup' %}" method="post">
         {% csrf_token %}
         <label>Username </label>
-        <input type="text" name="username">
+        <input type="text" name="username" required>
         <br><br>
         <label>Password </label>
-        <input type="password" name="password">
+        <input type="password" name="password" required>
         <br><br>
         <label>Email </label>
-        <input type="email" name="email">
+        <input type="email" name="email" required>
         <br><br>
         <label>Mobile </label>
-        <input type="text" name="mobile">
+        <input type="text" name="mobile" required>
         <br><br>
         <label>Address </label>
-        <textarea name="address"></textarea>
+        <textarea name="address" required></textarea>
         <br><br>
         <button type="submit">SIGN UP</button>
     </form>

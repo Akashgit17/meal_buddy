@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'delivery/styles.css' %}">
 </head>
 <body>
     <h3>Welcome {{username}}!</h3>
@@ -23,7 +25,7 @@
             </tr>
         </thead>
         <tbody>
-            {%  for item in itemList %}
+            {% for item in itemList %}
                 <tr>
                     <td>{{ item.name }}</td>
                     <td>
@@ -33,9 +35,7 @@
                     <td>{{ item.price }}</td>
                     <td>{{ item.vegeterian }}</td>
                     <td>
-                        <a href="{% url 'add_to_cart' item.id username %}">
-                            Add to cart
-                        </a>
+                        <a href="{% url 'add_to_cart' item.id username %}">Add to cart</a>
                     </td>
                 </tr>
             {% endfor %}

@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: lightcoral; /* Zomato-like red background */
+    margin: 0;
+    padding: 0;
+    color: #fff; /* White text for contrast */
+}
+
+h1, h2, h3 {
+    color: #fff; /* White headings */
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #fff; /* White links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff; /* White background for forms */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    color: #333; /* Dark text inside the form */
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333; /* Dark text for labels */
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #fff; /* White buttons */
+    color: #ff0033; /* Zomato-like red text on buttons */
+    border: 2px solid #fff; /* White border */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #ff0033; /* Red background on hover */
+    color: #fff; /* White text on hover */
+    border: 2px solid #fff; /* Keep the white border */
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #fff; /* White headings */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button, input[type="submit"] {
+    background-color: #fff; /* White buttons */
+    color: #ff0033; /* Zomato-like red text */
+    border: 2px solid #fff; /* White border */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #ff0033; /* Red background on hover */
+    color: #fff; /* White text on hover */
+    border: 2px solid #fff; /* Keep the white border */
+}

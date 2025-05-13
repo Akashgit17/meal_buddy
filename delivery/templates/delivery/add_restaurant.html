@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Restaurant</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'delivery/styles.css' %}">
 </head>
 <body>
     <form action="{% url 'add_restaurant' %}" method="post">
         {% csrf_token %}
         <label>Restaurant name </label>
-        <input type="text" name="name">
+        <input type="text" name="name" required>
         <br><br>
         <label>Picture url </label>
-        <input type="text" name="picture">
+        <input type="text" name="picture" required>
         <br><br>
         <label>Cuisine </label>
-        <input type="text" name="cuisine">
+        <input type="text" name="cuisine" required>
         <br><br>
         <label>Rating</label>
-        <input type="number" name="rating" min="0" max="5" step="0.5">
-        <br><br>
+        <input type="number" name="rating" min="0" max="5" step="0.5" required>
         <br><br>
         <button type="submit">Add Restaurant</button>
     </form>
