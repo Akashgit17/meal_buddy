@@ -1,19 +1,19 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: lightcoral; /* Zomato-like red background */
+    background-color: rgb(198, 24, 9); 
     margin: 0;
     padding: 0;
-    color: #fff; /* White text for contrast */
+    color: #fff; 
 }
 
 h1, h2, h3 {
-    color: #fff; /* White headings */
+    color: #fff; 
     text-align: center;
     margin-top: 20px;
 }
 
 a {
-    color: #fff; /* White links */
+    color: #fff; 
     text-decoration: none;
     font-weight: bold;
 }
@@ -53,8 +53,8 @@ form textarea {
 }
 
 form button {
-    background-color: #fff; /* White buttons */
-    color: #ff0033; /* Zomato-like red text on buttons */
+    background-color: #1c0909; /* White buttons */
+    color: white; /* Zomato-like red text on buttons */
     border: 2px solid #fff; /* White border */
     padding: 10px 20px;
     font-size: 16px;
@@ -66,7 +66,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #ff0033; /* Red background on hover */
+    background-color: #caacb2; /* Red background on hover */
     color: #fff; /* White text on hover */
     border: 2px solid #fff; /* Keep the white border */
 }
